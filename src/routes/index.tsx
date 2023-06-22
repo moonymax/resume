@@ -306,7 +306,7 @@ export function Home(props: any) {
               execution with natural language. While Pong was previously using a
               special system prompt to enable it to execute commands it now uses
               Openai's built in function/api calling which was recently
-              released. It can also be used as a soundboard or to play music.
+              released. It can also be used as a soundboard, or to play music.
             </div>
             <br />
             <script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2Fmoonymax%2FPong%2Fblob%2Fmaster%2FREADME.md&style=default&type=markdown&showBorder=on&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on"></script>
@@ -328,8 +328,8 @@ export function Home(props: any) {
               while maintaining similar performance to Java. Events are
               automatically forwarded at runtime using Java reflections to allow
               for greater compatibility across minecraft versions. The Pyhook
-              plugin simplifies the code writing process since boilerplate is
-              minimized and commands are registered dynamically. The python
+              plugin simplifies the code writing process by minimizing the need
+              for boilerplate and registering commands dynamically. The python
               process is automatically handled with the starting and stopping of
               the server. Py4J is the foundation of this plugin which allows for
               high quality and high performance interaction with the Java
@@ -348,10 +348,11 @@ export function Home(props: any) {
                 resume.xympf.net
               </a>{" "}
               is this website. It was created with Solidstart/SolidJS and is
-              designed to keep my private information off of the open web by
-              only showing it to authorized visitors.
+              designed to keep my private information off of the open web, only
+              showing it to authorized visitors.
             </div>
             <br />
+            <script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2Fmoonymax%2Fresume%2Fblob%2Fmaster%2FREADME.md&style=default&type=markdown&showBorder=on&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on"></script>
           </div>
         </div>
       </div>
