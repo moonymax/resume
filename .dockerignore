@@ -1,0 +1,5 @@
+.solid/
+node_modules/
+.dockerignore
+.gitignore
+.git/
