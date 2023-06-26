@@ -249,7 +249,7 @@ export function Home(props: any) {
           <h2 class="font-bold">vfxreport.xympf.net</h2>
           <div class="w-full h-[2px] bg-slate-600 rounded-3xl mb-8 mt-1"></div>
           <br />
-          <div class="flex flex-col">
+          <div class="flex flex-col items-center">
             <div>
               <a href="https://vfxreport.xympf.net" class="text-blue-600">
                 vfxreport.xympf.net
@@ -265,7 +265,7 @@ export function Home(props: any) {
               imported and exported as one Json file.
             </div>
             <br />
-            <div class="flex flex-wrap gap-5 max-w-[calc(100vw-18rem-0.75rem)] justify-center">
+            <div class="flex flex-wrap gap-5 sm:max-w-[calc(100vw-18rem-0.75rem)] max-w-[calc(100vw-0.75rem)] justify-center">
               <SizableImage
                 url="vfxreport-main-page.png"
                 width="inherit"
