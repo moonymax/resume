@@ -196,7 +196,7 @@ export function Home(props: any) {
 
         <h2 class="pt-8 underline underline-offset-4 hidden">Expertise</h2>
         <div class="pt-4 pb-4 hidden"></div>
-        <h2 class="pt-8 underline underline-offset-4">Language</h2>
+        <h2 class="pt-8 underline underline-offset-4">Languages</h2>
         <div class="pt-4 pb-4">
           Native English
           <br />
