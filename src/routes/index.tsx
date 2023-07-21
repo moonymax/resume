@@ -121,10 +121,20 @@ export function Home(props: any) {
           "rotateX(" + rotatex + ") rotateY(" + rotatey + ")";
       }
     });
+
+    /*
+    let iframes = Array.from(document.getElementsByTagName("iframe"));
+    setTimeout(() => {
+      iframes.forEach((iframe) => {
+        iframe.style.height =
+          iframe.contentWindow?.document.body.scrollHeight + "px";
+      });
+    }, 1000);
+    */
   });
 
   return (
-    <main class="flex flex-row min-h-max w-full relative">
+    <main class={"grid grid-flow-col min-h-max w-full relative"}>
       <button
         class="rounded p-2 fixed top-0 right-0 m-4 border border-blue-950 active:bg-blue-950 active:text-white z-50"
         onClick={() => {
@@ -160,7 +170,7 @@ export function Home(props: any) {
             </svg>
           }
         >
-          <div class="fixed top-0 bottom-0 left-0 right-0 bg-[hsla(0,0%,5%,0.5)]"></div>
+          <div class="fixed h-screen top-0 bottom-0 left-0 right-0 bg-[hsla(0,0%,5%,0.5)]"></div>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
@@ -178,7 +188,7 @@ export function Home(props: any) {
       </div>
       <div
         class={
-          "bg-[#323b4c] box-border z-20 text-white w-72 p-5 h-screen overflow-auto fixed sm:relative sm:h-auto sm:ml-0 transition-all" +
+          "bg-[#323b4c] box-border z-20 text-white w-[288px] p-5 h-screen overflow-auto fixed sm:relative sm:h-auto sm:ml-0 transition-all" +
           (showSideBar() ? " ml-0" : " ml-[-288px]")
         }
       >
@@ -215,7 +225,7 @@ export function Home(props: any) {
           German
         </div>
       </div>
-      <div class="bg-[#fdfdfd] w-full p-10">
+      <div class={"bg-[#fdfdfd] p-10 max-w-[100%]"}>
         <div class="m-3">
           <h1
             class={"text-3xl pb-5 font-semibold" + (validated ? "" : " blur")}
@@ -258,7 +268,7 @@ export function Home(props: any) {
           </Show>
           <h2 class="font-bold w-full">xympf.net</h2>
           <br />
-          <div class="w-full h-[2px] bg-slate-600 rounded-3xl mb-8 mt-1"></div>
+          <div class="h-[2px] bg-slate-600 rounded-3xl mb-8 mt-1 box-border"></div>
           <div class="flex flex-col">
             <Show
               when={!german()}
@@ -414,7 +424,10 @@ export function Home(props: any) {
               </div>
             </Show>
             <br />
-            <script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2Fmoonymax%2FPong%2Fblob%2Fmaster%2FREADME.md&style=default&type=markdown&showBorder=on&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on"></script>
+            <iframe
+              src="https://moonymax.github.io/Pong"
+              class="flex-grow w-full min-h-screen"
+            ></iframe>
           </div>
           <br />
           <h2 class="font-bold">Pyhook</h2>
@@ -469,7 +482,10 @@ export function Home(props: any) {
               </div>
             </Show>
             <br />
-            <script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2Fmoonymax%2Fpyhook%2Fblob%2Fmaster%2FREADME.md&style=default&type=markdown&showBorder=on&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on"></script>
+            <iframe
+              src="https://moonymax.github.io/pyhook"
+              class="flex-grow w-full min-h-screen"
+            ></iframe>
           </div>
           <br />
           <h2 class="font-bold">resume.xympf.net</h2>
@@ -500,7 +516,10 @@ export function Home(props: any) {
               </div>
             </Show>
             <br />
-            <script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2Fmoonymax%2Fresume%2Fblob%2Fmaster%2FREADME.md&style=default&type=markdown&showBorder=on&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on"></script>
+            <iframe
+              class="flex-grow w-full min-h-screen"
+              src="https://moonymax.github.io/resume"
+            ></iframe>
           </div>
         </div>
       </div>
