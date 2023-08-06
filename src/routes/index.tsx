@@ -236,25 +236,23 @@ export function Home(props: any) {
             when={!german()}
             fallback={
               <div>
-                Selbst beigebrachter Full-Stack Webentwickler. Ich habe
-                Infrastruktur und Anwendungen eigenständig entwickelt,
-                bereitgestellt und verwaltet, unter Verwendung von Python,
+                Als Webenwickler schreibe ich Anwendungen in Python,
                 TypeScript/JavaScript und Frameworks wie Svelte, React,
-                SolidStart/SolidJS und Django. Ich halte mich über die neuesten
-                Trends und Technologien in der Webentwicklung auf dem Laufenden,
-                um bessere Werkzeuge und Technologien schnell anzuwenden, sobald
-                sie verfügbar sind.
+                SolidStart/SolidJS und Django. Dabei ist mir wichtig über die
+                neuesten Trends und Technologien in der Webentwicklung auf dem
+                Laufenden zu sein, um diese Technologien zeitnah und effizent
+                einzusetzen.
               </div>
             }
           >
             <div>
-              Self-taught full-stack web developer. I have developed, deployed
-              and am independently managing infrastructure and applications
-              using Python, TypeScript/JavaScript, and frameworks such as
-              Svelte, React, SolidStart/SolidJS and Django. I stay up-to-date
-              with the latest web development trends and technologies inorder to
-              quickly adopt better tools and technologies as they become
-              available.
+              I am a Self-taught full-stack web developer. I have developed,
+              deployed and am independently managing infrastructure and
+              applications using Python, TypeScript/JavaScript, and frameworks
+              such as Svelte, React, SolidStart/SolidJS and Django. I stay
+              up-to-date with the latest web development trends and technologies
+              inorder to quickly adopt better tools and technologies as they
+              become available.
             </div>
           </Show>
         </div>
@@ -277,19 +275,21 @@ export function Home(props: any) {
                   <a href="https://xympf.net" class="text-blue-600">
                     xympf.net
                   </a>{" "}
-                  ist ein Echtzeit-Kollaborationsorganisator, der mit MySQL,
-                  Redis, Django und React entwickelt wurde und mit tailwindcss
-                  gestylt ist. Die Bereitstellung erfolgt mit gunicorn und
-                  daphne, und die Auslieferung erfolgt über nginx. Die Anwendung
-                  ermöglicht es mehreren Benutzern, gemeinsam Aufgaben in
-                  Echtzeit zu erstellen und zu organisieren. Sie unterstützt den
-                  Offline-Betrieb und kann als Progressive Web App installiert
-                  werden. Dieses Projekt hat mehrere Migrationen durchlaufen.
-                  Anfangs in reinem JavaScript geschrieben, wurde die
-                  Front-End-Entwicklung auf React umgestellt, und die Anwendung
-                  befindet sich derzeit im Prozess der Migration zu SolidJS,
-                  wobei das Backend zu Solidstart wechselt. Das Styling wurde
-                  von reinem CSS auf Tailwindcss geändert.
+                  ist ein Echtzeit-Organizer für mehrere Nutzer. Die Anwendung
+                  wurde mit <i>MySQL</i>, <i>Redis</i>, <i>Django</i> und{" "}
+                  <i>React</i> entwickelt und mit <i>tailwindcss</i> gestylt.
+                  Das Deployment erfolgt mit gunicorn und daphne, und wird über
+                  nginx gehostet. <br />
+                  Die Anwendung ermöglicht es mehreren Benutzern, gemeinsam
+                  Aufgaben in Echtzeit zu erstellen und zu organisieren. Sie
+                  unterstützt den Offline-Betrieb und kann als Progressive Web
+                  App installiert werden. <br />
+                  Dieses Projekt hat mehrere Migrationen durchlaufen: Anfangs in
+                  reinem JavaScript geschrieben, wurde die Front-End-Entwicklung
+                  auf React umgestellt. Die Anwendung wird derzeit auf{" "}
+                  <i>SolidJS</i>
+                  und SolidStart migriert. Das Styling wurde von reinem CSS auf
+                  Tailwindcss umgestellt.
                 </div>
               }
             >
@@ -300,13 +300,16 @@ export function Home(props: any) {
                 is a realtime collaborative structured organizer built with
                 MySQL, Redis, Django and React, styled with tailwindcss,
                 deployed with gunicorn and daphne, served/exposed with nginx.
+                <br />
                 The application allows multiple users to collaboratively create
                 and organize tasks in realtime. It has offline support and is
-                installable as a Progressive Web App. This project has undergone
-                serveral migrations. Initially written in pure JS the front end
-                migrated to React and the application is currently in the
-                process of being migrated to SolidJS with the backend moving to
-                Solidstart. The styling changed from pure css to Tailwindcss.
+                installable as a Progressive Web App.
+                <br />
+                This project has undergone serveral migrations. Initially the
+                front-end was written in pure JavaScript and was then migrated
+                to React. The application is currently in the process of being
+                migrated to SolidJS with the backend moving to SolidStart. The
+                styling changed from pure css to Tailwindcss.
               </div>
             </Show>
             <br />
@@ -325,17 +328,15 @@ export function Home(props: any) {
                   <a href="https://vfxreport.xympf.net" class="text-blue-600">
                     vfxreport.xympf.net
                   </a>{" "}
-                  ist eine statische Webanwendung für Effektnotizen am Set eines
-                  VFX-Studios. Sie wurde gemäß dem UI-Design und den
-                  Spezifikationen/Vorgaben des VFX-Studios entwickelt. Die
+                  ist eine Static Webapp für Effektnotizen am Set eines
+                  Film-Studios (VFX-Studio). Sie wurde gemäß dem UI-Design und
+                  den Spezifikationen/Vorgaben des Studios entwickelt. Die
                   Informationen werden vor Ort vom VFX-Supervisor eingegeben und
-                  können anschließend vom VFX-Künstler exportiert und eingesehen
-                  werden. Diese Anwendung ist eine statische
-                  Single-Page-Anwendung, die mit Svelte entwickelt wurde. Alle
-                  Daten werden clientseitig in Echtzeit mit IndexedDB
-                  gespeichert und werden bei Änderungen granular aktualisiert.
-                  Die Daten, einschließlich Bilder, können als JSON-Datei
-                  importiert und exportiert werden.
+                  können anschließend vom VFX-Artist eingesehen und exportiert
+                  werden. Diese Anwendung wurde als Single Page Application mit
+                  Svelte entwickelt. Alle Daten werden clientside in Echtzeit
+                  mit IndexedDB gespeichert. Die Daten, einschließlich Bildern,
+                  können als JSON-Datei exportiert und importiert werden.
                 </div>
               }
             >
@@ -343,15 +344,15 @@ export function Home(props: any) {
                 <a href="https://vfxreport.xympf.net" class="text-blue-600">
                   vfxreport.xympf.net
                 </a>{" "}
-                is a static web application for on set effects notes for a VFX
-                Studio. It is built with the UI design and
-                specification/requirements provided by the VFX Studio.
+                is a static webapp for on set effects notes for a Film-Studio
+                (Visual Effects Studio) based on the UI design and
+                specification/requirements provided by the Studio. <br />
                 Information is filled in on set by the VFX superviser which can
                 then be exported and viewed by the VFX Artist. This application
-                is a static Single Page Application written with Svelte. All
-                data is saved client side in realtime with IndexedDB and is
-                updated granularly as changes are made. The data, including
-                images, can be imported and exported as one Json file.
+                is a static Single Page Application (SPA) written with Svelte.
+                All data is saved clientside in realtime with IndexedDB and is
+                updated granularly. The data, including images, can be imported
+                and exported as one Json file.
               </div>
             </Show>
             <br />
@@ -400,11 +401,11 @@ export function Home(props: any) {
                   </a>{" "}
                   ist ein Discord-Bot, der die OpenAI-API für das Chatten und
                   die Ausführung von Befehlen mit natürlicher Sprache verwendet.
-                  Während Pong zuvor ein spezielles Systemprompt verwendet hat,
-                  um die Ausführung von Befehlen zu ermöglichen, nutzt es nun
-                  die integrierte Funktion/API-Aufrufe von OpenAI, die kürzlich
-                  veröffentlicht wurden. Es kann auch als Soundboard verwendet
-                  werden oder Musik abspielen.
+                  Es kann als Soundboard verwendet werden oder um Musik
+                  abzuspielen. Während Pong zuvor ein spezielles Systemprompt
+                  verwendet hat, um die Ausführung von Befehlen zu ermöglichen,
+                  nutzt es nun die integrierte Funktion/API-Aufrufe von OpenAI,
+                  die kürzlich veröffentlicht wurden.
                 </div>
               }
             >
@@ -416,11 +417,11 @@ export function Home(props: any) {
                   Pong
                 </a>{" "}
                 is a discord bot which uses Openai's api for chatting and
-                command execution with natural language. While Pong was
-                previously using a special system prompt to enable it to execute
-                commands it now uses Openai's built in function/api calling
-                which was recently released. It can also be used as a
-                soundboard, or to play music.
+                command execution with natural language. It can be used as a
+                soundboard, or to play music. While Pong was previously using a
+                special system prompt to enable it to execute commands it now
+                uses Openai's built in function/api calling which was recently
+                released.
               </div>
             </Show>
             <br />
@@ -445,19 +446,16 @@ export function Home(props: any) {
                     Pyhook
                   </a>{" "}
                   ermöglicht das Schreiben von Minecraft-Server-Plugins mit
-                  Python anstelle von Java. Dies beschleunigt die
-                  Entwicklungszeit und verbessert die Lesbarkeit des Codes,
-                  während eine ähnliche Leistung wie Java beibehalten wird.
-                  Ereignisse werden automatisch zur Laufzeit mithilfe von
-                  Java-Reflexionen weitergeleitet, um eine größere
+                  Python anstelle von Java basierend auf Py4J. Dies beschleunigt
+                  die Entwicklungszeit und verbessert die Lesbarkeit des Codes
+                  mit ähnlicher Performance. Events werden automatisch mithilfe
+                  von Java-Reflections weitergeleitet, um größtmögliche
                   Kompatibilität über verschiedene Minecraft-Versionen hinweg zu
                   ermöglichen. Das Pyhook-Plugin vereinfacht den
-                  Code-Schreibprozess, indem der Bedarf an Boilerplate-Material
-                  minimiert und Befehle dynamisch registriert werden. Der
-                  Python-Prozess wird automatisch mit dem Starten und Stoppen
-                  des Servers verwaltet. Py4J bildet das Fundament dieses
-                  Plugins, das eine hochwertige und leistungsstarke Interaktion
-                  mit der Java-Laufzeitumgebung ermöglicht.
+                  Entwicklungsprozess, indem der Bedarf an Boilerplate-Code
+                  minimiert wird. Das Plugin ist so designed, dass Befehle
+                  dynamisch registriert werden. Der Python-Prozess wird
+                  automatisch mit dem Starten und Stoppen des Servers verwaltet.
                 </div>
               }
             >
@@ -469,16 +467,15 @@ export function Home(props: any) {
                   Pyhook
                 </a>{" "}
                 allows minecraft server plugins to be written with python
-                instead of Java which speeds up development time and code
-                readablilty while maintaining similar performance to Java.
-                Events are automatically forwarded at runtime using Java
-                reflections to allow for greater compatibility across minecraft
-                versions. The Pyhook plugin simplifies the code writing process
-                by minimizing the need for boilerplate and registering commands
-                dynamically. The python process is automatically handled with
-                the starting and stopping of the server. Py4J is the foundation
-                of this plugin which allows for high quality and high
-                performance interaction with the Java runtime.
+                instead of Java and is based on Py4J. This speeds up development
+                time and code readablilty while maintaining similar performance
+                to Java. Events are automatically forwarded at runtime using
+                Java reflections to allow for greater compatibility across
+                minecraft versions. The Pyhook plugin simplifies the code
+                writing process by minimizing the need for boilerplate. The
+                plugin is designed to register commands dynamically. The python
+                process is automatically handled with the starting and stopping
+                of the server.
               </div>
             </Show>
             <br />
@@ -500,9 +497,8 @@ export function Home(props: any) {
                     resume.xympf.net
                   </a>{" "}
                   ist diese Website. Sie wurde mit Solidstart/SolidJS erstellt
-                  und wurde entworfen, um meine privaten Informationen aus dem
-                  öffentlichen Web herauszuhalten und sie nur autorisierten
-                  Besuchern anzuzeigen.
+                  und wurde so entworfen, dass meine privaten Informationen nur
+                  autorisierten Besuchern über einen link zuganglich sind.
                 </div>
               }
             >
@@ -512,7 +508,7 @@ export function Home(props: any) {
                 </a>{" "}
                 is this website. It was created with Solidstart/SolidJS and is
                 designed to keep my private information off of the open web,
-                only showing it to authorized visitors.
+                only showing it with an authorized link.
               </div>
             </Show>
             <br />
