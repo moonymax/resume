@@ -287,9 +287,8 @@ export function Home(props: any) {
                   Dieses Projekt hat mehrere Migrationen durchlaufen: Anfangs in
                   reinem JavaScript geschrieben, wurde die Front-End-Entwicklung
                   auf React umgestellt. Die Anwendung wird derzeit auf{" "}
-                  <i>SolidJS</i>
-                  und SolidStart migriert. Das Styling wurde von reinem CSS auf
-                  Tailwindcss umgestellt.
+                  <i>SolidJS</i> und SolidStart migriert. Das Styling wurde von
+                  reinem CSS auf Tailwindcss umgestellt.
                 </div>
               }
             >
