@@ -240,7 +240,7 @@ export function Home(props: any) {
                 TypeScript/JavaScript und Frameworks wie Svelte, React,
                 SolidStart/SolidJS und Django. Dabei ist mir wichtig über die
                 neuesten Trends und Technologien in der Webentwicklung auf dem
-                Laufenden zu sein, um diese Technologien zeitnah und effizent
+                Laufenden zu sein, um diese Technologien zeitnah und effizient
                 einzusetzen.
               </div>
             }
@@ -497,7 +497,7 @@ export function Home(props: any) {
                   </a>{" "}
                   ist diese Website. Sie wurde mit Solidstart/SolidJS erstellt
                   und wurde so entworfen, dass meine privaten Informationen nur
-                  autorisierten Besuchern über einen link zuganglich sind.
+                  autorisierten Besuchern über einen Link zugänglich sind.
                 </div>
               }
             >
