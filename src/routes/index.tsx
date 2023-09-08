@@ -38,26 +38,7 @@ function ParallaxImage(props: {
     </div>
   );
 }
-function SizableImage(props: { url: string; width?: string; height?: string }) {
-  //change the css styling to be reusable
-  let style = "";
-  if (props.height) {
-    style += "max-height: " + props.height + ";";
-  }
-  if (props.width) {
-    style += "max-width: " + props.width + ";";
-  }
-  return (
-    <div class="wrapper flex items-center justify-center mx-auto max-w-full">
-      <img
-        src={props.url}
-        style={style}
-        class="rounded-xl z-10 shadow-[0_25px_50px_-12px_rgb(0_0_0_/_0.5)]"
-        alt=""
-      />
-    </div>
-  );
-}
+
 type productprops = {
   title: string;
   body: string;
@@ -156,7 +137,7 @@ export function Home(props: any) {
         class={
           "z-20 fixed cursor-pointer border rounded-sm" +
           (showSideBar() ? "border-white" : " border-[#323b4c] ") +
-          "transition-all sm:invisible mt-2" +
+          "transition-all md:invisible mt-2" +
           (showSideBar() ? " ml-[calc(288px+0.5rem)]" : " ml-2")
         }
         onClick={() => setShowSideBar(!showSideBar())}
@@ -195,7 +176,7 @@ export function Home(props: any) {
       </div>
       <div
         class={
-          "bg-[#323b4c] box-border z-20 text-white w-[288px] p-5 h-screen overflow-auto fixed sm:relative sm:h-auto sm:ml-0 transition-all" +
+          "bg-[#323b4c] box-border z-20 text-white w-[288px] p-5 h-screen overflow-auto fixed md:relative md:h-auto md:ml-0 transition-all" +
           (showSideBar() ? " ml-0" : " ml-[-288px]")
         }
       >
@@ -227,9 +208,9 @@ export function Home(props: any) {
         <div class="pt-4 pb-4 hidden"></div>
         <h2 class="pt-8 underline underline-offset-4">Languages</h2>
         <div class="pt-4 pb-4">
-          Native English
+          Native German
           <br />
-          German
+          Native Level English
         </div>
       </div>
       <div class={"bg-[#fdfdfd] p-10 max-w-[100%]"}>
@@ -273,251 +254,280 @@ export function Home(props: any) {
           </Show>
           <h2 class="font-bold w-full">xympf.net</h2>
           <br />
-          <div class="h-[2px] bg-slate-600 rounded-3xl mb-8 mt-1 box-border"></div>
-          <div class="flex flex-col">
-            <Show
-              when={!german()}
-              fallback={
+          <div class="h-[2px] bg-slate-600 rounded-3xl mb-7 mt-1 box-border"></div>
+          <div class="flex 2xl:flex-row flex-col gap-3">
+            <div class="">
+              <div class="flex flex-row flex-wrap gap-1 mb-2">
+                <TechTag>
+                  <a
+                    title="Facebook, Public domain, via Wikimedia Commons"
+                    href="https://commons.wikimedia.org/wiki/File:React-icon.svg"
+                  >
+                    <img
+                      width="18"
+                      alt="React-icon"
+                      src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/32px-React-icon.svg.png"
+                    />
+                  </a>
+                </TechTag>
+                <TechTag>
+                  <a
+                    title="Tailwind CSS, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons"
+                    href="https://commons.wikimedia.org/wiki/File:Tailwind_CSS_Logo.svg"
+                  >
+                    <img
+                      width="23"
+                      alt="Tailwind CSS Logo"
+                      src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/32px-Tailwind_CSS_Logo.svg.png"
+                    />
+                  </a>
+                </TechTag>
+                <a href="http://www.djangoproject.com/">
+                  <img
+                    class="h-6"
+                    src="https://www.djangoproject.com/m/img/badges/djangomade124x25.gif"
+                    alt="Made with Django."
+                    title="Made with Django."
+                  />
+                </a>
+                <TechTag>
+                  <a
+                    title="™/®Oracle Corporation, Public domain, via Wikimedia Commons"
+                    href="https://commons.wikimedia.org/wiki/File:MySQL_textlogo.svg"
+                  >
+                    <img
+                      class="h-4"
+                      alt="MySQL textlogo"
+                      src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/MySQL_textlogo.svg/256px-MySQL_textlogo.svg.png"
+                    />
+                  </a>
+                </TechTag>
+                <TechTag>
+                  <a
+                    title="Liran.amir, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons"
+                    href="https://commons.wikimedia.org/wiki/File:Logo-redis.svg"
+                  >
+                    <img
+                      class="h-4"
+                      alt="Logo-redis"
+                      src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Logo-redis.svg/512px-Logo-redis.svg.png"
+                    />
+                  </a>
+                </TechTag>
+                <TechTag>
+                  <a
+                    title="Benoit Chesneau?, Xavier Grangier, CC BY 3.0 &lt;https://creativecommons.org/licenses/by/3.0&gt;, via Wikimedia Commons"
+                    href="https://commons.wikimedia.org/wiki/File:Gunicorn_logo_2010.svg"
+                  >
+                    <img
+                      class="h-4"
+                      alt="Gunicorn logo 2010"
+                      src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Gunicorn_logo_2010.svg/256px-Gunicorn_logo_2010.svg.png"
+                    />
+                  </a>
+                </TechTag>
+                <TechTag>
+                  <a
+                    title="Same author as NginxLogo.gif, Public domain, via Wikimedia Commons"
+                    href="https://commons.wikimedia.org/wiki/File:Nginx_logo.svg"
+                  >
+                    <img
+                      class="h-4"
+                      alt="Nginx logo"
+                      src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Nginx_logo.svg/256px-Nginx_logo.svg.png"
+                    />
+                  </a>
+                </TechTag>
+              </div>
+              <Show
+                when={!german()}
+                fallback={
+                  <div>
+                    <a href="https://xympf.net" class="text-blue-600">
+                      xympf.net
+                    </a>{" "}
+                    ist ein Echtzeit-Organizer für mehrere Nutzer. Die Anwendung
+                    wurde mit <i>MySQL</i>, <i>Redis</i>, <i>Django</i> und{" "}
+                    <i>React</i> entwickelt und mit <i>tailwindcss</i> gestylt.
+                    Das Deployment erfolgt mit gunicorn und daphne, und wird
+                    über nginx gehostet. <br />
+                    Die Anwendung ermöglicht es mehreren Benutzern, gemeinsam
+                    Aufgaben in Echtzeit zu erstellen und zu organisieren. Sie
+                    unterstützt den Offline-Betrieb und kann als Progressive Web
+                    App installiert werden. <br />
+                    Dieses Projekt hat mehrere Migrationen durchlaufen: Anfangs
+                    in reinem JavaScript geschrieben, wurde die
+                    Front-End-Entwicklung auf React umgestellt. Die Anwendung
+                    wird derzeit auf <i>SolidJS</i> und SolidStart migriert. Das
+                    Styling wurde von reinem CSS auf Tailwindcss umgestellt.
+                  </div>
+                }
+              >
                 <div>
                   <a href="https://xympf.net" class="text-blue-600">
                     xympf.net
                   </a>{" "}
-                  ist ein Echtzeit-Organizer für mehrere Nutzer. Die Anwendung
-                  wurde mit <i>MySQL</i>, <i>Redis</i>, <i>Django</i> und{" "}
-                  <i>React</i> entwickelt und mit <i>tailwindcss</i> gestylt.
-                  Das Deployment erfolgt mit gunicorn und daphne, und wird über
-                  nginx gehostet. <br />
-                  Die Anwendung ermöglicht es mehreren Benutzern, gemeinsam
-                  Aufgaben in Echtzeit zu erstellen und zu organisieren. Sie
-                  unterstützt den Offline-Betrieb und kann als Progressive Web
-                  App installiert werden. <br />
-                  Dieses Projekt hat mehrere Migrationen durchlaufen: Anfangs in
-                  reinem JavaScript geschrieben, wurde die Front-End-Entwicklung
-                  auf React umgestellt. Die Anwendung wird derzeit auf{" "}
-                  <i>SolidJS</i> und SolidStart migriert. Das Styling wurde von
-                  reinem CSS auf Tailwindcss umgestellt.
+                  is a realtime collaborative structured organizer built with
+                  MySQL, Redis, Django and React, styled with tailwindcss,
+                  deployed with gunicorn and daphne, served/exposed with nginx.
+                  <br />
+                  The application allows multiple users to collaboratively
+                  create and organize tasks in realtime. It has offline support
+                  and is installable as a Progressive Web App.
+                  <br />
+                  This project has undergone serveral migrations. Initially the
+                  front-end was written in pure JavaScript and was then migrated
+                  to React. The application is currently in the process of being
+                  migrated to SolidJS with the backend moving to SolidStart. The
+                  styling changed from pure css to Tailwindcss.
                 </div>
-              }
-            >
-              <div>
-                <a href="https://xympf.net" class="text-blue-600">
-                  xympf.net
-                </a>{" "}
-                is a realtime collaborative structured organizer built with
-                MySQL, Redis, Django and React, styled with tailwindcss,
-                deployed with gunicorn and daphne, served/exposed with nginx.
-                <br />
-                The application allows multiple users to collaboratively create
-                and organize tasks in realtime. It has offline support and is
-                installable as a Progressive Web App.
-                <br />
-                This project has undergone serveral migrations. Initially the
-                front-end was written in pure JavaScript and was then migrated
-                to React. The application is currently in the process of being
-                migrated to SolidJS with the backend moving to SolidStart. The
-                styling changed from pure css to Tailwindcss.
-              </div>
-            </Show>
-            <div class="flex flex-row gap-1 mt-2">
-              <TechTag>
-                <a
-                  title="Facebook, Public domain, via Wikimedia Commons"
-                  href="https://commons.wikimedia.org/wiki/File:React-icon.svg"
-                >
-                  <img
-                    width="18"
-                    alt="React-icon"
-                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/32px-React-icon.svg.png"
-                  />
-                </a>
-              </TechTag>
-              <TechTag>
-                <a
-                  title="Tailwind CSS, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons"
-                  href="https://commons.wikimedia.org/wiki/File:Tailwind_CSS_Logo.svg"
-                >
-                  <img
-                    width="23"
-                    alt="Tailwind CSS Logo"
-                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/32px-Tailwind_CSS_Logo.svg.png"
-                  />
-                </a>
-              </TechTag>
-              <a href="http://www.djangoproject.com/">
-                <img
-                  class="h-6"
-                  src="https://www.djangoproject.com/m/img/badges/djangomade124x25.gif"
-                  alt="Made with Django."
-                  title="Made with Django."
-                />
-              </a>
-              <TechTag>
-                <a
-                  title="™/®Oracle Corporation, Public domain, via Wikimedia Commons"
-                  href="https://commons.wikimedia.org/wiki/File:MySQL_textlogo.svg"
-                >
-                  <img
-                    class="h-4"
-                    alt="MySQL textlogo"
-                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/MySQL_textlogo.svg/256px-MySQL_textlogo.svg.png"
-                  />
-                </a>
-              </TechTag>
-              <TechTag>
-                <a
-                  title="Liran.amir, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons"
-                  href="https://commons.wikimedia.org/wiki/File:Logo-redis.svg"
-                >
-                  <img
-                    class="h-4"
-                    alt="Logo-redis"
-                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Logo-redis.svg/512px-Logo-redis.svg.png"
-                  />
-                </a>
-              </TechTag>
-              <TechTag>
-                <a
-                  title="Benoit Chesneau?, Xavier Grangier, CC BY 3.0 &lt;https://creativecommons.org/licenses/by/3.0&gt;, via Wikimedia Commons"
-                  href="https://commons.wikimedia.org/wiki/File:Gunicorn_logo_2010.svg"
-                >
-                  <img
-                    class="h-4"
-                    alt="Gunicorn logo 2010"
-                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Gunicorn_logo_2010.svg/256px-Gunicorn_logo_2010.svg.png"
-                  />
-                </a>
-              </TechTag>
-              <TechTag>
-                <a
-                  title="Same author as NginxLogo.gif, Public domain, via Wikimedia Commons"
-                  href="https://commons.wikimedia.org/wiki/File:Nginx_logo.svg"
-                >
-                  <img
-                    class="h-4"
-                    alt="Nginx logo"
-                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Nginx_logo.svg/256px-Nginx_logo.svg.png"
-                  />
-                </a>
-              </TechTag>
+              </Show>
             </div>
-            <br />
-            <ParallaxImage url="xympf.net.webp"></ParallaxImage>
+            <div class="2xl:max-w-2xl 2xl:min-w-[672px]">
+              <ParallaxImage url="xympf.net.webp"></ParallaxImage>
+            </div>
           </div>
 
-          <br />
-          <h2 class="font-bold">vfxreport.xympf.net</h2>
-          <div class="w-full h-[2px] bg-slate-600 rounded-3xl mb-8 mt-1"></div>
-          <br />
-          <div class="">
-            <Show
-              when={!german()}
-              fallback={
-                <div>
-                  <a href="https://vfxreport.xympf.net" class="text-blue-600">
-                    vfxreport.xympf.net
-                  </a>{" "}
-                  ist eine Static Webapp für Effektnotizen am Set eines
-                  Film-Studios (VFX-Studio). Sie wurde gemäß dem UI-Design und
-                  den Spezifikationen/Vorgaben des Studios entwickelt. Die
-                  Informationen werden vor Ort vom VFX-Supervisor eingegeben und
-                  können anschließend vom VFX-Artist eingesehen und exportiert
-                  werden. Diese Anwendung wurde als Single Page Application mit
-                  Svelte entwickelt. Alle Daten werden clientside in Echtzeit
-                  mit IndexedDB gespeichert. Die Daten, einschließlich Bildern,
-                  können als JSON-Datei exportiert und importiert werden.
+          <h2 class="font-bold mt-12">vfxreport.xympf.net</h2>
+          <div class="w-full h-[2px] bg-slate-600 rounded-3xl mb-7 mt-1"></div>
+          <div class="flex flex-col gap-8">
+            <div class="flex 2xl:flex-row  flex-col gap-3">
+              <div class="flex flex-col gap-2">
+                <div class="flex flex-row gap-1">
+                  <TechTag>
+                    <a
+                      title="[these people](https://github.com/sveltejs/svelte/graphs/contributors), MIT &lt;http://opensource.org/licenses/mit-license.php&gt;, via Wikimedia Commons"
+                      href="https://commons.wikimedia.org/wiki/File:Svelte_Logo.svg"
+                    >
+                      <img
+                        class="h-4"
+                        alt="Svelte Logo"
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Svelte_Logo.svg/32px-Svelte_Logo.svg.png"
+                      />
+                    </a>
+                  </TechTag>
+                  <TechTag>
+                    <a
+                      title="Tailwind CSS, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons"
+                      href="https://commons.wikimedia.org/wiki/File:Tailwind_CSS_Logo.svg"
+                    >
+                      <img
+                        width="23"
+                        alt="Tailwind CSS Logo"
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/32px-Tailwind_CSS_Logo.svg.png"
+                      />
+                    </a>
+                  </TechTag>
+                  <TechTag>
+                    <a
+                      title="Same author as NginxLogo.gif, Public domain, via Wikimedia Commons"
+                      href="https://commons.wikimedia.org/wiki/File:Nginx_logo.svg"
+                    >
+                      <img
+                        class="h-4"
+                        alt="Nginx logo"
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Nginx_logo.svg/256px-Nginx_logo.svg.png"
+                      />
+                    </a>
+                  </TechTag>
                 </div>
-              }
-            >
-              <div>
-                <a href="https://vfxreport.xympf.net" class="text-blue-600">
-                  vfxreport.xympf.net
-                </a>{" "}
-                is a static webapp for on set effects notes for a Film-Studio
-                (Visual Effects Studio) based on the UI design and
-                specification/requirements provided by the Studio. <br />
-                Information is filled in on set by the VFX superviser which can
-                then be exported and viewed by the VFX Artist. This application
-                is a static Single Page Application (SPA) written with Svelte.
-                All data is saved clientside in realtime with IndexedDB and is
-                updated granularly. The data, including images, can be imported
-                and exported as one Json file.
+                <Show
+                  when={!german()}
+                  fallback={
+                    <div>
+                      <a
+                        href="https://vfxreport.xympf.net"
+                        class="text-blue-600"
+                      >
+                        vfxreport.xympf.net
+                      </a>{" "}
+                      ist eine Static Webapp für Effektnotizen am Set eines
+                      Film-Studios (VFX-Studio). Sie wurde gemäß dem UI-Design
+                      und den Spezifikationen/Vorgaben des Studios entwickelt.
+                      Die Informationen werden vor Ort vom VFX-Supervisor
+                      eingegeben und können anschließend vom VFX-Artist
+                      eingesehen und exportiert werden. Diese Anwendung wurde
+                      als Single Page Application mit Svelte entwickelt. Alle
+                      Daten werden clientside in Echtzeit mit IndexedDB
+                      gespeichert. Die Daten, einschließlich Bildern, können als
+                      JSON-Datei exportiert und importiert werden.
+                    </div>
+                  }
+                >
+                  <div>
+                    <a href="https://vfxreport.xympf.net" class="text-blue-600">
+                      vfxreport.xympf.net
+                    </a>{" "}
+                    is a static webapp for on set effects notes for a
+                    Film-Studio (Visual Effects Studio) based on the UI design
+                    and specification/requirements provided by the Studio.{" "}
+                    <br />
+                    Information is filled in on set by the VFX superviser which
+                    can then be exported and viewed by the VFX Artist. This
+                    application is a static Single Page Application (SPA)
+                    written with Svelte. All data is saved clientside in
+                    realtime with IndexedDB and is updated granularly. The data,
+                    including images, can be imported and exported as one Json
+                    file.
+                  </div>
+                </Show>
               </div>
-            </Show>
-            <div class="flex flex-row gap-1 mt-2">
-              <TechTag>
-                <a
-                  title="[these people](https://github.com/sveltejs/svelte/graphs/contributors), MIT &lt;http://opensource.org/licenses/mit-license.php&gt;, via Wikimedia Commons"
-                  href="https://commons.wikimedia.org/wiki/File:Svelte_Logo.svg"
+              <div class="flex flex-col gap-3 items-center justify-center">
+                <img
+                  class="rounded-xl z-10 2xl:max-w-2xl shadow-[0_25px_50px_-12px_rgb(0_0_0_/_0.5)]"
+                  src="vfxreport-main-page.png"
+                  alt=""
+                />
+                <button
+                  class="rounded bg-[#323b4c] p-2 text-white active:bg-white active:text-[#323b4c]"
+                  onClick={() => {
+                    setShowVfxReport(!showVfxReport());
+                  }}
                 >
-                  <img
-                    class="h-4"
-                    alt="Svelte Logo"
-                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Svelte_Logo.svg/32px-Svelte_Logo.svg.png"
-                  />
-                </a>
-              </TechTag>
-              <TechTag>
-                <a
-                  title="Tailwind CSS, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons"
-                  href="https://commons.wikimedia.org/wiki/File:Tailwind_CSS_Logo.svg"
-                >
-                  <img
-                    width="23"
-                    alt="Tailwind CSS Logo"
-                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/32px-Tailwind_CSS_Logo.svg.png"
-                  />
-                </a>
-              </TechTag>
-              <TechTag>
-                <a
-                  title="Same author as NginxLogo.gif, Public domain, via Wikimedia Commons"
-                  href="https://commons.wikimedia.org/wiki/File:Nginx_logo.svg"
-                >
-                  <img
-                    class="h-4"
-                    alt="Nginx logo"
-                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Nginx_logo.svg/256px-Nginx_logo.svg.png"
-                  />
-                </a>
-              </TechTag>
+                  {showVfxReport() ? "Show Less" : "Show More"}
+                </button>
+              </div>
             </div>
-            <br />
-            <div class="flex flex-wrap gap-5 sm:max-w-[calc(100vw-18rem-0.75rem)] max-w-[calc(100vw-0.75rem)] justify-center">
-              <SizableImage
-                url="vfxreport-main-page.png"
-                width="inherit"
-              ></SizableImage>
+            <div class="flex flex-col gap-5 items-center justify-center">
               <Show when={showVfxReport()} fallback="">
-                <SizableImage
-                  url="vfxreport-scene-page.png"
-                  width="inherit"
-                ></SizableImage>
-                <SizableImage
-                  url="vfxreport-concept-page.png"
-                  width="inherit"
-                ></SizableImage>
+                <img
+                  class="rounded-xl z-10 shadow-[0_25px_50px_-12px_rgb(0_0_0_/_0.5)]"
+                  src="vfxreport-scene-page.png"
+                  alt=""
+                />
+                <img
+                  class="rounded-xl z-10 shadow-[0_25px_50px_-12px_rgb(0_0_0_/_0.5)]"
+                  src="vfxreport-concept-page.png"
+                  alt=""
+                />
               </Show>
-              <button
-                class="rounded bg-[#323b4c] p-2 text-white active:bg-white active:text-[#323b4c]"
-                onClick={() => {
-                  setShowVfxReport(!showVfxReport());
-                }}
-              >
-                {showVfxReport() ? "Show Less" : "Show More"}
-              </button>
             </div>
-            <br />
-            <br />
-            <br />
           </div>
-          <br />
-          <h2 class="font-bold">Pong</h2>
-          <div class="w-full h-[2px] bg-slate-600 rounded-3xl mb-8 mt-1"></div>
-          <br />
-          <div class="flex flex-col">
-            <Show
-              when={!german()}
-              fallback={
+          <h2 class="font-bold mt-12">Pong</h2>
+          <div class="w-full h-[2px] bg-slate-600 rounded-3xl mb-7 mt-1"></div>
+          <div class=" flex flex-col gap-2">
+            <div class=" flex flex-col gap-2 ">
+              <Show
+                when={!german()}
+                fallback={
+                  <div>
+                    <a
+                      href="https://github.com/moonymax/Pong"
+                      class="text-blue-600"
+                    >
+                      Pong
+                    </a>{" "}
+                    ist ein Discord-Bot, der die OpenAI-API für das Chatten und
+                    die Ausführung von Befehlen mit natürlicher Sprache
+                    verwendet. Es kann als Soundboard verwendet werden oder um
+                    Musik abzuspielen. Während Pong zuvor ein spezielles
+                    Systemprompt verwendet hat, um die Ausführung von Befehlen
+                    zu ermöglichen, nutzt es nun die integrierte
+                    Funktion/API-Aufrufe von OpenAI, die kürzlich veröffentlicht
+                    wurden.
+                  </div>
+                }
+              >
                 <div>
                   <a
                     href="https://github.com/moonymax/Pong"
@@ -525,68 +535,49 @@ export function Home(props: any) {
                   >
                     Pong
                   </a>{" "}
-                  ist ein Discord-Bot, der die OpenAI-API für das Chatten und
-                  die Ausführung von Befehlen mit natürlicher Sprache verwendet.
-                  Es kann als Soundboard verwendet werden oder um Musik
-                  abzuspielen. Während Pong zuvor ein spezielles Systemprompt
-                  verwendet hat, um die Ausführung von Befehlen zu ermöglichen,
-                  nutzt es nun die integrierte Funktion/API-Aufrufe von OpenAI,
-                  die kürzlich veröffentlicht wurden.
+                  is a discord bot which uses Openai's api for chatting and
+                  command execution with natural language. It can be used as a
+                  soundboard, or to play music. While Pong was previously using
+                  a special system prompt to enable it to execute commands it
+                  now uses Openai's built in function/api calling which was
+                  recently released.
                 </div>
-              }
-            >
-              <div>
-                <a
-                  href="https://github.com/moonymax/Pong"
-                  class="text-blue-600"
-                >
-                  Pong
-                </a>{" "}
-                is a discord bot which uses Openai's api for chatting and
-                command execution with natural language. It can be used as a
-                soundboard, or to play music. While Pong was previously using a
-                special system prompt to enable it to execute commands it now
-                uses Openai's built in function/api calling which was recently
-                released.
+              </Show>
+              <div class="flex flex-row gap-1">
+                <TechTag>
+                  <a
+                    title="Discord.py"
+                    href="https://discordpy.readthedocs.io/en/stable/index.html"
+                  >
+                    <img
+                      class="h-4"
+                      alt="Tailwind CSS Logo"
+                      src="https://discordpy.readthedocs.io/en/stable/_static/discord_py_logo.ico"
+                    />
+                  </a>
+                </TechTag>
+                <TechTag>
+                  <a
+                    title="Original: OpenAI Vector:  Zhing Za, Public domain, via Wikimedia Commons"
+                    href="https://commons.wikimedia.org/wiki/File:ChatGPT_logo.svg"
+                  >
+                    <img
+                      class="h-4 rounded"
+                      alt="ChatGPT logo"
+                      src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/ChatGPT_logo.svg/32px-ChatGPT_logo.svg.png"
+                    />
+                  </a>
+                </TechTag>
               </div>
-            </Show>
-            <div class="flex flex-row gap-1 mt-2">
-              <TechTag>
-                <a
-                  title="Discord.py"
-                  href="https://discordpy.readthedocs.io/en/stable/index.html"
-                >
-                  <img
-                    class="h-4"
-                    alt="Tailwind CSS Logo"
-                    src="https://discordpy.readthedocs.io/en/stable/_static/discord_py_logo.ico"
-                  />
-                </a>
-              </TechTag>
-              <TechTag>
-                <a
-                  title="Original: OpenAI Vector:  Zhing Za, Public domain, via Wikimedia Commons"
-                  href="https://commons.wikimedia.org/wiki/File:ChatGPT_logo.svg"
-                >
-                  <img
-                    class="h-4 rounded"
-                    alt="ChatGPT logo"
-                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/ChatGPT_logo.svg/32px-ChatGPT_logo.svg.png"
-                  />
-                </a>
-              </TechTag>
             </div>
-            <br />
             <iframe
               src="https://moonymax.github.io/Pong"
-              class="flex-grow w-full min-h-screen"
+              class="min-h-screen flex-grow"
             ></iframe>
           </div>
-          <br />
-          <h2 class="font-bold">Pyhook</h2>
-          <div class="w-full h-[2px] bg-slate-600 rounded-3xl mb-8 mt-1"></div>
-          <br />
-          <div class="flex flex-col">
+          <h2 class="font-bold mt-12">Pyhook</h2>
+          <div class="w-full h-[2px] bg-slate-600 rounded-3xl mb-7 mt-1"></div>
+          <div class="flex flex-col gap-2">
             <Show
               when={!german()}
               fallback={
@@ -630,17 +621,14 @@ export function Home(props: any) {
                 of the server.
               </div>
             </Show>
-            <br />
             <iframe
               src="https://moonymax.github.io/pyhook"
-              class="flex-grow w-full min-h-screen"
+              class="min-h-screen flex-grow"
             ></iframe>
           </div>
-          <br />
-          <h2 class="font-bold">resume.xympf.net</h2>
-          <div class="w-full h-[2px] bg-slate-600 rounded-3xl mb-8 mt-1"></div>
-          <br />
-          <div class="flex flex-col">
+          <h2 class="font-bold mt-12">resume.xympf.net</h2>
+          <div class="w-full h-[2px] bg-slate-600 rounded-3xl mb-7 mt-1"></div>
+          <div class="flex flex-col gap-2">
             <Show
               when={!german()}
               fallback={
@@ -687,9 +675,8 @@ export function Home(props: any) {
                 />
               </a>
             </div>
-            <br />
             <iframe
-              class="flex-grow w-full min-h-screen"
+              class="min-h-screen flex-grow"
               src="https://moonymax.github.io/resume"
             ></iframe>
           </div>
