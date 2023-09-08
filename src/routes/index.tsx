@@ -3,6 +3,13 @@ import { For, JSX, Show, createSignal, onMount } from "solid-js";
 import { createServerData$ } from "solid-start/server";
 import { createSign } from "crypto";
 
+function TechTag(props: { children: any }) {
+  return (
+    <div class="rounded bg-slate-200 p-1 h-6 flex justify-center">
+      {props.children}
+    </div>
+  );
+}
 function ParallaxImage(props: {
   url: string;
   height?: number;
@@ -311,6 +318,88 @@ export function Home(props: any) {
                 styling changed from pure css to Tailwindcss.
               </div>
             </Show>
+            <div class="flex flex-row gap-1 mt-2">
+              <TechTag>
+                <a
+                  title="Facebook, Public domain, via Wikimedia Commons"
+                  href="https://commons.wikimedia.org/wiki/File:React-icon.svg"
+                >
+                  <img
+                    width="18"
+                    alt="React-icon"
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/32px-React-icon.svg.png"
+                  />
+                </a>
+              </TechTag>
+              <TechTag>
+                <a
+                  title="Tailwind CSS, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons"
+                  href="https://commons.wikimedia.org/wiki/File:Tailwind_CSS_Logo.svg"
+                >
+                  <img
+                    width="23"
+                    alt="Tailwind CSS Logo"
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/32px-Tailwind_CSS_Logo.svg.png"
+                  />
+                </a>
+              </TechTag>
+              <a href="http://www.djangoproject.com/">
+                <img
+                  class="h-6"
+                  src="https://www.djangoproject.com/m/img/badges/djangomade124x25.gif"
+                  alt="Made with Django."
+                  title="Made with Django."
+                />
+              </a>
+              <TechTag>
+                <a
+                  title="™/®Oracle Corporation, Public domain, via Wikimedia Commons"
+                  href="https://commons.wikimedia.org/wiki/File:MySQL_textlogo.svg"
+                >
+                  <img
+                    class="h-4"
+                    alt="MySQL textlogo"
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/MySQL_textlogo.svg/256px-MySQL_textlogo.svg.png"
+                  />
+                </a>
+              </TechTag>
+              <TechTag>
+                <a
+                  title="Liran.amir, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons"
+                  href="https://commons.wikimedia.org/wiki/File:Logo-redis.svg"
+                >
+                  <img
+                    class="h-4"
+                    alt="Logo-redis"
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Logo-redis.svg/512px-Logo-redis.svg.png"
+                  />
+                </a>
+              </TechTag>
+              <TechTag>
+                <a
+                  title="Benoit Chesneau?, Xavier Grangier, CC BY 3.0 &lt;https://creativecommons.org/licenses/by/3.0&gt;, via Wikimedia Commons"
+                  href="https://commons.wikimedia.org/wiki/File:Gunicorn_logo_2010.svg"
+                >
+                  <img
+                    class="h-4"
+                    alt="Gunicorn logo 2010"
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Gunicorn_logo_2010.svg/256px-Gunicorn_logo_2010.svg.png"
+                  />
+                </a>
+              </TechTag>
+              <TechTag>
+                <a
+                  title="Same author as NginxLogo.gif, Public domain, via Wikimedia Commons"
+                  href="https://commons.wikimedia.org/wiki/File:Nginx_logo.svg"
+                >
+                  <img
+                    class="h-4"
+                    alt="Nginx logo"
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Nginx_logo.svg/256px-Nginx_logo.svg.png"
+                  />
+                </a>
+              </TechTag>
+            </div>
             <br />
             <ParallaxImage url="xympf.net.webp"></ParallaxImage>
           </div>
@@ -319,7 +408,7 @@ export function Home(props: any) {
           <h2 class="font-bold">vfxreport.xympf.net</h2>
           <div class="w-full h-[2px] bg-slate-600 rounded-3xl mb-8 mt-1"></div>
           <br />
-          <div class="flex flex-col items-center">
+          <div class="">
             <Show
               when={!german()}
               fallback={
@@ -354,6 +443,44 @@ export function Home(props: any) {
                 and exported as one Json file.
               </div>
             </Show>
+            <div class="flex flex-row gap-1 mt-2">
+              <TechTag>
+                <a
+                  title="[these people](https://github.com/sveltejs/svelte/graphs/contributors), MIT &lt;http://opensource.org/licenses/mit-license.php&gt;, via Wikimedia Commons"
+                  href="https://commons.wikimedia.org/wiki/File:Svelte_Logo.svg"
+                >
+                  <img
+                    class="h-4"
+                    alt="Svelte Logo"
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Svelte_Logo.svg/32px-Svelte_Logo.svg.png"
+                  />
+                </a>
+              </TechTag>
+              <TechTag>
+                <a
+                  title="Tailwind CSS, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons"
+                  href="https://commons.wikimedia.org/wiki/File:Tailwind_CSS_Logo.svg"
+                >
+                  <img
+                    width="23"
+                    alt="Tailwind CSS Logo"
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/32px-Tailwind_CSS_Logo.svg.png"
+                  />
+                </a>
+              </TechTag>
+              <TechTag>
+                <a
+                  title="Same author as NginxLogo.gif, Public domain, via Wikimedia Commons"
+                  href="https://commons.wikimedia.org/wiki/File:Nginx_logo.svg"
+                >
+                  <img
+                    class="h-4"
+                    alt="Nginx logo"
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Nginx_logo.svg/256px-Nginx_logo.svg.png"
+                  />
+                </a>
+              </TechTag>
+            </div>
             <br />
             <div class="flex flex-wrap gap-5 sm:max-w-[calc(100vw-18rem-0.75rem)] max-w-[calc(100vw-0.75rem)] justify-center">
               <SizableImage
@@ -423,6 +550,32 @@ export function Home(props: any) {
                 released.
               </div>
             </Show>
+            <div class="flex flex-row gap-1 mt-2">
+              <TechTag>
+                <a
+                  title="Discord.py"
+                  href="https://discordpy.readthedocs.io/en/stable/index.html"
+                >
+                  <img
+                    class="h-4"
+                    alt="Tailwind CSS Logo"
+                    src="https://discordpy.readthedocs.io/en/stable/_static/discord_py_logo.ico"
+                  />
+                </a>
+              </TechTag>
+              <TechTag>
+                <a
+                  title="Original: OpenAI Vector:  Zhing Za, Public domain, via Wikimedia Commons"
+                  href="https://commons.wikimedia.org/wiki/File:ChatGPT_logo.svg"
+                >
+                  <img
+                    class="h-4 rounded"
+                    alt="ChatGPT logo"
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/ChatGPT_logo.svg/32px-ChatGPT_logo.svg.png"
+                  />
+                </a>
+              </TechTag>
+            </div>
             <br />
             <iframe
               src="https://moonymax.github.io/Pong"
@@ -510,6 +663,30 @@ export function Home(props: any) {
                 only showing it with an authorized link.
               </div>
             </Show>
+            <div class="flex flex-row gap-1 mt-2">
+              <TechTag>
+                <a
+                  title="SolidJS, MIT &lt;http://opensource.org/licenses/mit-license.php&gt;, via Wikimedia Commons"
+                  href="https://commons.wikimedia.org/wiki/File:Logo_SolidJS.svg"
+                >
+                  <img
+                    class="h-4"
+                    alt="Logo SolidJS"
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Logo_SolidJS.svg/256px-Logo_SolidJS.svg.png"
+                  />
+                </a>
+              </TechTag>
+              <a
+                title="Original: OpenAI Vector:  Zhing Za, Public domain, via Wikimedia Commons"
+                href="https://commons.wikimedia.org/wiki/File:ChatGPT_logo.svg"
+              >
+                <img
+                  class="h-6 rounded"
+                  alt="JWT logo"
+                  src="http://jwt.io/img/logo-asset.svg"
+                />
+              </a>
+            </div>
             <br />
             <iframe
               class="flex-grow w-full min-h-screen"
