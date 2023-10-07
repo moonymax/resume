@@ -9,11 +9,10 @@ To protect private information, the website redacts Name, address, etc. for visi
 ## Dynamic Content
 
 The animated Image of [Xympf.net](https://xympf.net) is using CSS and Typescript to create a tilt effect which dynamically follows the cursor.
-The sidebar is automatically adjusted to be part of the site or open/closeable depending on the size of the screen.
 
 ## Projects
 
-These are projects showcased with this site along with a short description. For a more detailed showcase of these projects visit [resume.xympf.net](https://resume.xympf.net)
+These are some projects showcased with this site along with a short description. For a more detailed showcase of these projects visit [resume.xympf.net](https://resume.xympf.net)
 
 - Xympf.net:
   - Description: Collaborative Task Organizer Built with Django and React.
@@ -41,13 +40,10 @@ These are projects showcased with this site along with a short description. For 
   - Description: This website (My Resume)
   - Repository: [repo](https://github.com/moonymax/resume)
 
-## Installation and Usage
+## Personal Info
 
-To run the webserver locally, follow these steps:
+The personal info is provided as environment variables.
 
-1. Clone the repository.
-2. Install the necessary dependencies using npm. This step can be skipped when using docker.
-3. Set up the required environment variables, including the secret key for link generation.<br>
 ```
 # The secret has to be used to generate links at <domain>/generate.
 VITE_SECRET="" # This is the secret 64 bytes hex string for token verification.
@@ -62,9 +58,6 @@ VITE_ED_4="" # This a school
 VITE_DOMAIN="" # This is the domain the website will run under
 PORT="" # This is the port the docker container will expose
 ```
-4. Run the webserver using `docker compose up`.
-
-Create a full access link at `<domain>/generate` to view the full information on the website.
 
 ## Technologies and Language
 
