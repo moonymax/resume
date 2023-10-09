@@ -167,6 +167,20 @@ export function Home(props: any) {
                 }}
               </For>
             </div>
+            <h2 class="p-4 text-xl pt-6 font-semibold">Projects Timeline</h2>
+            <hr />
+            <div class={validated ? "" : " blur"}>
+              <For each={data?.projects}>
+                {(item) => {
+                  return (
+                    <>
+                      {item}
+                      <br />
+                    </>
+                  );
+                }}
+              </For>
+            </div>
 
             <Show
               when={!german()}

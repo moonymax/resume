@@ -44,11 +44,12 @@ export function routeData({ params }: RouteDataArgs) {
             import.meta.env.VITE_ED_2,
             import.meta.env.VITE_ED_3,
             import.meta.env.VITE_ED_4,
+          ],
+          projects: [
             import.meta.env.VITE_ED_5,
             import.meta.env.VITE_ED_6,
             import.meta.env.VITE_ED_7,
             import.meta.env.VITE_ED_8,
-            import.meta.env.VITE_ED_9,
           ],
         };
       }
