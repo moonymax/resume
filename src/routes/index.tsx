@@ -70,7 +70,8 @@ export default function App() {
         phone: "Redacted",
         email: "Redacted@Redacted.com",
         address: "Redacted",
-        education: ["Redacted", "Redacted", "Redacted"],
+        education: ["RedactedRedacted", "RedactedRedacted", "RedactedRedacted"],
+        projects: ["RedactedRedacted", "RedactedRedacted", "RedactedRedacted"],
       }}
     ></Home>
   );
@@ -123,7 +124,9 @@ export function Home(props: any) {
 
   return (
     <main
-      class={"grid grid-flow-col dark:text-white min-h-max w-full relative"}
+      class={
+        "grid grid-flow-col text-sm dark:text-white min-h-max w-full relative"
+      }
     >
       <button
         class="rounded p-2 fixed top-0 right-0 m-4 border border-blue-950 active:bg-blue-950 active:text-white z-50"
@@ -219,20 +222,23 @@ export function Home(props: any) {
                       "Programmier Sprachen: Javascript/Typescript, Python, Java, GDScript (Gamedev)"
                     }
                     <br />
+                    <br />
                     {
                       "Programmier Sprachen (erste erfahrungen): Rust, Julia, Elm, C, C++"
                     }
                     <br />
+                    <br />
                     {
-                      "Programmier Bereiche: Frontend Entwicklung, Backend Entwicklung, Applied Cryptography, Erasure Codes"
+                      "Programmier Bereiche: Frontend Entwicklung, Backend Entwicklung, Applied Cryptography"
                     }
                     <br />
                     {
-                      "Game Entwicklung, Android Entwicklung, Daten Analyse (Anfänger), IOS Entwicklung (Anfänger)"
+                      "Game Entwicklung, Android Entwicklung (Beginner), Daten Analyse (Anfänger)"
                     }
                     <br />
+                    <br />
                     {
-                      "Frameworks/Technologien: React/Next.js, Svelte, SolidJS/SolidStart, Django, NodeJS, Docker, Godot"
+                      "Frameworks/Technologien/Tools: React/Next.js, Svelte, SolidJS/SolidStart, Supabase, Django, NodeJS, Docker, Postgres, MySQL, Sqlite, Godot"
                     }
                   </div>
                 }
@@ -242,20 +248,23 @@ export function Home(props: any) {
                     "Programming Languages: Javascript/Typescript, Python, Java, GDScript (Gamedev)"
                   }
                   <br />
+                  <br />
                   {
                     "Programming Languages (base experience): Rust, Julia, Elm, C, C++"
                   }
                   <br />
+                  <br />
                   {
-                    "Programming Domains: Frontend development, Backend development, Applied Cryptography, Erasure Codes"
+                    "Programming Domains: Frontend development, Backend development, Applied Cryptography"
                   }
                   <br />
                   {
-                    "Game Development, Android Development, Data Analytics (Beginner), IOS Development (Beginner)"
+                    "Game Development, Android Development (Beginner), Data Analytics (Beginner)"
                   }
                   <br />
+                  <br />
                   {
-                    "Frameworks/Technologies: React/Next.js, Svelte, SolidJS/SolidStart, Django, NodeJS, Docker, Godot"
+                    "Frameworks/Technologies/Tools: React/Next.js, Svelte, SolidJS/SolidStart, Supabase, Django, NodeJS, Docker, Postgres, MySQL, Sqlite, Godot"
                   }
                 </div>
               </Show>
@@ -271,7 +280,7 @@ export function Home(props: any) {
             <h1 class="p-6 text-3xl pt-8 font-semibold">Projects</h1>
           </Show>
           <hr />
-          <div class="xl:grid xl:grid-cols-2 gap-5">
+          <div class="lg:grid lg:grid-cols-2 gap-5">
             <div class=" flex flex-col gap-2 p-4">
               <Show
                 when={!german()}
@@ -555,7 +564,7 @@ export function Home(props: any) {
                     ist eine Vorlage für die schnelle Erstellung einer
                     SolidStart-Anwendung. Sie verwendet einen E-Mail-basierten
                     Auth-flow, Websockets (inkompatibel mit serverless
-                    functions), Prisma (Sqlite) und Tailwind.
+                    providers), Prisma (Sqlite) und Tailwind.
                   </div>
                 }
               >
@@ -568,7 +577,7 @@ export function Home(props: any) {
                   </a>{" "}
                   is a template for quickly creating a SolidStart Application.
                   It is using an email based auth flow, Websockets (Incompatible
-                  with serverless functions), Prisma (Sqlite) and Tailwind.
+                  with serverless platforms), Prisma (Sqlite) and Tailwind.
                 </div>
               </Show>
               <div class="flex flex-row gap-1 mt-2">

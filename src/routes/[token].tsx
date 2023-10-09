@@ -51,7 +51,8 @@ export function routeData({ params }: RouteDataArgs) {
         phone: "Redacted",
         email: "Redacted@Redacted.com",
         address: "Redacted",
-        education: ["Redacted", "Redacted", "Redacted"],
+        education: ["RedactedRedacted", "RedactedRedacted", "RedactedRedacted"],
+        projects: ["RedactedRedacted", "RedactedRedacted", "RedactedRedacted"],
       };
     },
     { key: () => params.token }
