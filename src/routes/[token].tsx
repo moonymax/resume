@@ -33,8 +33,8 @@ export function routeData({ params }: RouteDataArgs) {
       const token = key;
       const valid = await validate(token);
       if (valid) {
-        let education = [import.meta.env.VITE_ED.split("*")];
-        let projects = [import.meta.env.VITE_PROJ.split("*")];
+        let education = import.meta.env.VITE_ED.split("*");
+        let projects = import.meta.env.VITE_PROJ.split("*");
         return {
           validated: true,
           name: import.meta.env.VITE_NAME,

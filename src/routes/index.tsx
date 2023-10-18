@@ -1,8 +1,24 @@
-import { A, RouteDataArgs, useRouteData } from "solid-start";
+import { A, RouteDataArgs, useParams, useRouteData } from "solid-start";
 import { For, JSX, Show, createSignal, onMount } from "solid-js";
 import { createServerData$ } from "solid-start/server";
 import { createSign } from "crypto";
-
+const [isPDF, setIsPDF] = createSignal(false);
+function More(props: { children: JSX.Element }) {
+  const params = useParams();
+  //this is a button or a link to my website with token
+  return (
+    <>
+      <Show when={isPDF()} fallback={props.children}>
+        <a
+          href={"https://" + import.meta.env.VITE_DOMAIN + "/" + params.token}
+          class="cursor-pointer rounded p-2 text-white bg-[#323b4c] w-fit"
+        >
+          More
+        </a>
+      </Show>
+    </>
+  );
+}
 function TechTag(props: { children: any }) {
   return (
     <div class="rounded bg-slate-200 p-1 h-6 flex justify-center">
@@ -151,7 +167,12 @@ export function Home(props: any) {
             <div class={validated ? "" : " blur"}>
               Phone: {data?.phone}
               <br />
-              Email: {data?.email}
+              Email:{" "}
+              <Show when={validated}>
+                <a class="text-blue-700" href={"mailto:" + data?.email}>
+                  {data?.email}
+                </a>
+              </Show>
               <br />
               Address: {data?.address}
               <br />
@@ -161,12 +182,7 @@ export function Home(props: any) {
             <div class={validated ? "" : " blur"}>
               <For each={data?.education}>
                 {(item) => {
-                  return (
-                    <>
-                      {item}
-                      <br />
-                    </>
-                  );
+                  return <div>{item}</div>;
                 }}
               </For>
             </div>
@@ -175,12 +191,7 @@ export function Home(props: any) {
             <div class={validated ? "" : " blur"}>
               <For each={data?.projects}>
                 {(item) => {
-                  return (
-                    <>
-                      {item}
-                      <br />
-                    </>
-                  );
+                  return <div>{item}</div>;
                 }}
               </For>
             </div>
@@ -229,7 +240,7 @@ export function Home(props: any) {
                     <br />
                     <br />
                     {
-                      "Programmier Bereiche: Frontend Entwicklung, Backend Entwicklung, Applied Cryptography"
+                      "Programmier Bereiche: Frontend Entwicklung, Backend Entwicklung, Data structures and Algorithms, Applied Cryptography"
                     }
                     <br />
                     {
@@ -255,7 +266,7 @@ export function Home(props: any) {
                   <br />
                   <br />
                   {
-                    "Programming Domains: Frontend development, Backend development, Applied Cryptography"
+                    "Programming Domains: Frontend development, Backend development, Data structures and Algorithms, Applied Cryptography"
                   }
                   <br />
                   {
@@ -388,16 +399,18 @@ export function Home(props: any) {
                   </a>
                 </TechTag>
               </div>
-              <details class="flex flex-col gap-32">
-                <summary class="cursor-pointer rounded p-2 text-white bg-[#323b4c] w-fit">
-                  More
-                </summary>
-                <div>
-                  <div class=" w-full">
-                    <ParallaxImage url="xympf.net.webp"></ParallaxImage>
+              <More>
+                <details class="flex flex-col gap-32">
+                  <summary class="cursor-pointer rounded p-2 text-white bg-[#323b4c] w-fit">
+                    More
+                  </summary>
+                  <div>
+                    <div class=" w-full">
+                      <ParallaxImage url="xympf.net.webp"></ParallaxImage>
+                    </div>
                   </div>
-                </div>
-              </details>
+                </details>
+              </More>
             </div>
             <div class=" flex flex-col gap-2 p-4">
               <Show
@@ -453,15 +466,17 @@ export function Home(props: any) {
                   </a>
                 </TechTag>
               </div>
-              <details class="flex flex-col">
-                <summary class="cursor-pointer rounded p-2 text-white bg-[#323b4c] w-fit">
-                  More
-                </summary>
-                <iframe
-                  src="https://moonymax.github.io/Pong"
-                  class="min-h-screen w-full p-3"
-                ></iframe>
-              </details>
+              <More>
+                <details class="flex flex-col">
+                  <summary class="cursor-pointer rounded p-2 text-white bg-[#323b4c] w-fit">
+                    More
+                  </summary>
+                  <iframe
+                    src="https://moonymax.github.io/Pong"
+                    class="min-h-screen w-full p-3"
+                  ></iframe>
+                </details>
+              </More>
             </div>
             <div class="flex flex-col gap-2 p-4">
               <Show
@@ -490,15 +505,17 @@ export function Home(props: any) {
                   instead of Java and is based on Py4J.
                 </div>
               </Show>
-              <details class="flex flex-col">
-                <summary class="cursor-pointer rounded p-2 text-white bg-[#323b4c] w-fit">
-                  More
-                </summary>
-                <iframe
-                  src="https://moonymax.github.io/pyhook"
-                  class="min-h-screen w-full p-3"
-                ></iframe>
-              </details>
+              <More>
+                <details class="flex flex-col">
+                  <summary class="cursor-pointer rounded p-2 text-white bg-[#323b4c] w-fit">
+                    More
+                  </summary>
+                  <iframe
+                    src="https://moonymax.github.io/pyhook"
+                    class="min-h-screen w-full p-3"
+                  ></iframe>
+                </details>
+              </More>
             </div>
             <div class="flex flex-col gap-2 p-4">
               <Show
@@ -540,15 +557,17 @@ export function Home(props: any) {
                   />
                 </a>
               </div>
-              <details class="flex flex-col">
-                <summary class="cursor-pointer rounded p-2 text-white bg-[#323b4c] w-fit">
-                  More
-                </summary>
-                <iframe
-                  class="min-h-[50vh] w-full p-3"
-                  src="https://moonymax.github.io/socketRPC"
-                ></iframe>
-              </details>
+              <More>
+                <details class="flex flex-col">
+                  <summary class="cursor-pointer rounded p-2 text-white bg-[#323b4c] w-fit">
+                    More
+                  </summary>
+                  <iframe
+                    class="min-h-[50vh] w-full p-3"
+                    src="https://moonymax.github.io/socketRPC"
+                  ></iframe>
+                </details>
+              </More>
             </div>
             <div class="flex flex-col gap-2 p-4">
               <Show
@@ -620,15 +639,17 @@ export function Home(props: any) {
                   </a>
                 </TechTag>
               </div>
-              <details class="flex flex-col">
-                <summary class="cursor-pointer rounded p-2 text-white bg-[#323b4c] w-fit">
-                  More
-                </summary>
-                <iframe
-                  class="min-h-[60vh] w-full p-3"
-                  src="https://moonymax.github.io/st3"
-                ></iframe>
-              </details>
+              <More>
+                <details class="flex flex-col">
+                  <summary class="cursor-pointer rounded p-2 text-white bg-[#323b4c] w-fit">
+                    More
+                  </summary>
+                  <iframe
+                    class="min-h-[60vh] w-full p-3"
+                    src="https://moonymax.github.io/st3"
+                  ></iframe>
+                </details>
+              </More>
             </div>
             <div class="flex flex-col gap-2 p-4">
               <Show
@@ -677,15 +698,17 @@ export function Home(props: any) {
                   />
                 </a>
               </div>
-              <details class="flex flex-col">
-                <summary class="cursor-pointer rounded p-2 text-white bg-[#323b4c] w-fit">
-                  More
-                </summary>
-                <iframe
-                  class="min-h-screen w-full p-3"
-                  src="https://moonymax.github.io/resume"
-                ></iframe>
-              </details>
+              <More>
+                <details class="flex flex-col">
+                  <summary class="cursor-pointer rounded p-2 text-white bg-[#323b4c] w-fit">
+                    More
+                  </summary>
+                  <iframe
+                    class="min-h-screen w-full p-3"
+                    src="https://moonymax.github.io/resume"
+                  ></iframe>
+                </details>
+              </More>
             </div>
             <div class="flex flex-col gap-2 p-4">
               <Show
@@ -749,28 +772,30 @@ export function Home(props: any) {
                   </a>
                 </TechTag>
               </div>
-              <details class="flex flex-col">
-                <summary class="cursor-pointer rounded p-2 text-white bg-[#323b4c] w-fit">
-                  More
-                </summary>
-                <div class="flex flex-col gap-3 p-3">
-                  <img
-                    class="rounded-xl z-10 shadow-[0_25px_50px_-12px_rgb(0_0_0_/_0.5)]"
-                    src="vfxreport-main-page.png"
-                    alt=""
-                  />
-                  <img
-                    class="rounded-xl z-10 shadow-[0_25px_50px_-12px_rgb(0_0_0_/_0.5)]"
-                    src="vfxreport-scene-page.png"
-                    alt=""
-                  />
-                  <img
-                    class="rounded-xl z-10 shadow-[0_25px_50px_-12px_rgb(0_0_0_/_0.5)]"
-                    src="vfxreport-concept-page.png"
-                    alt=""
-                  />
-                </div>
-              </details>
+              <More>
+                <details class="flex flex-col">
+                  <summary class="cursor-pointer rounded p-2 text-white bg-[#323b4c] w-fit">
+                    More
+                  </summary>
+                  <div class="flex flex-col gap-3 p-3">
+                    <img
+                      class="rounded-xl z-10 shadow-[0_25px_50px_-12px_rgb(0_0_0_/_0.5)]"
+                      src="vfxreport-main-page.png"
+                      alt=""
+                    />
+                    <img
+                      class="rounded-xl z-10 shadow-[0_25px_50px_-12px_rgb(0_0_0_/_0.5)]"
+                      src="vfxreport-scene-page.png"
+                      alt=""
+                    />
+                    <img
+                      class="rounded-xl z-10 shadow-[0_25px_50px_-12px_rgb(0_0_0_/_0.5)]"
+                      src="vfxreport-concept-page.png"
+                      alt=""
+                    />
+                  </div>
+                </details>
+              </More>
             </div>
             <div class="flex flex-col gap-2 p-4">
               <Show
@@ -815,15 +840,17 @@ export function Home(props: any) {
                   </a>
                 </TechTag>
               </div>
-              <details class="flex flex-col">
-                <summary class="cursor-pointer rounded p-2 text-white bg-[#323b4c] w-fit">
-                  More
-                </summary>
-                <iframe
-                  class="min-h-[60vh] w-full p-3"
-                  src="https://moonymax.github.io/DataAnalysisNotebooks/"
-                ></iframe>
-              </details>
+              <More>
+                <details class="flex flex-col">
+                  <summary class="cursor-pointer rounded p-2 text-white bg-[#323b4c] w-fit">
+                    More
+                  </summary>
+                  <iframe
+                    class="min-h-[60vh] w-full p-3"
+                    src="https://moonymax.github.io/DataAnalysisNotebooks/"
+                  ></iframe>
+                </details>
+              </More>
             </div>
           </div>
         </div>
@@ -858,6 +885,12 @@ export function Home(props: any) {
             become available.
           </div>
         </Show>
+        <div
+          class="hover:bg-blue-500 w-full text-white p-2 rounded text-center m-3 cursor-pointer"
+          onclick={() => setIsPDF((prev) => !prev)}
+        >
+          PDF Mode
+        </div>
       </div>
     </main>
   );
