@@ -154,14 +154,14 @@ export function Home(props: any) {
           de
         </Show>
       </button>
-      <div class={"dark:bg-slate-900 p-16 lg:pl-52 lg:pr-52 max-w-[100%]"}>
+      <div class={"dark:bg-slate-900 p-12 lg:pl-52 lg:pr-52 max-w-[100%]"}>
         <div>
           <h1
             class={"text-3xl pb-4 font-semibold" + (validated ? "" : " blur")}
           >
             {data?.name}
           </h1>
-          <div class={" box-border z-20 p-3 overflow-auto transition-all"}>
+          <div class={" box-border z-20 overflow-auto transition-all"}>
             <h2 class="p-4 text-xl font-semibold">Personal Info</h2>
             <hr />
             <div class={validated ? "" : " blur"}>
@@ -244,7 +244,7 @@ export function Home(props: any) {
                     }
                     <br />
                     {
-                      "Game Entwicklung, Android Entwicklung (Beginner), Daten Analyse (Anfänger)"
+                      "Game Entwicklung, Android Entwicklung (Anfänger), Daten Analyse (Anfänger)"
                     }
                     <br />
                     <br />
@@ -283,6 +283,39 @@ export function Home(props: any) {
           </div>
         </div>
 
+        <Show
+          when={!german()}
+          fallback={
+            <h2 class="p-4 text-xl pt-6 font-semibold">{"Über Mich"}</h2>
+          }
+        >
+          <h2 class="p-4 text-xl pt-6 font-semibold">{"About Me"}</h2>
+        </Show>
+        <Show
+          when={!german()}
+          fallback={
+            <div>
+              Als Webenwickler schreibe ich Anwendungen in Python,
+              TypeScript/JavaScript und Frameworks wie Svelte, React,
+              SolidStart/SolidJS und Django. Dabei ist mir wichtig über die
+              neuesten Trends und Technologien in der Webentwicklung auf dem
+              Laufenden zu sein, um diese Technologien zeitnah und effizient
+              einzusetzen. Ich habe in den letzten Jahren viel gelernt und bin
+              entschlossen, in Zukunft noch mehr zu lernen.
+            </div>
+          }
+        >
+          <div>
+            I am a Self-taught full-stack web developer with an Entrepreneurial
+            spirit. I have developed, deployed and am independently managing
+            infrastructure and applications using Python, TypeScript/JavaScript,
+            and frameworks such as Svelte, React, SolidStart/SolidJS and Django.
+            I stay up-to-date with new technologies inorder to quickly adopt
+            better tools and ideas as they become available. I have learned a
+            lot over the past few years and am determined to learn even more in
+            the future.
+          </div>
+        </Show>
         <div>
           <Show
             when={!german()}
@@ -304,7 +337,8 @@ export function Home(props: any) {
                     wurde mit <i>MySQL</i>, <i>Redis</i>, <i>Django</i> und{" "}
                     <i>React</i> entwickelt und mit <i>tailwindcss</i> gestylt.
                     Das Deployment erfolgt mit gunicorn und daphne, und wird
-                    über nginx gehostet.{" "}
+                    über nginx gehostet. Dieses Projekt ist von allen meinen
+                    Projekten am längsten in der Entwicklung (4 Jahre).{" "}
                   </div>
                 }
               >
@@ -314,7 +348,9 @@ export function Home(props: any) {
                   </a>{" "}
                   is a realtime collaborative task organizer built with MySQL,
                   Redis, Django and React, styled with tailwindcss, deployed
-                  with gunicorn and daphne, served/exposed with nginx.
+                  with gunicorn and daphne, served/exposed with nginx. This
+                  Project has been in development for the longest of all my
+                  projects (4 years).
                 </div>
               </Show>
               <div class="flex flex-row flex-wrap gap-1 ">
@@ -405,6 +441,27 @@ export function Home(props: any) {
                     More
                   </summary>
                   <div>
+                    <Show
+                      when={!german()}
+                      fallback={
+                        <div>
+                          Aufgrund dieses Projekts lege ich nun mehr Wert auf
+                          Wartbarkeit, Lesbarkeit und Einfachheit als auf alles
+                          andere. Ich habe die langfristigen Folgen meiner
+                          schlechten Designentscheidungen erkannt und die daraus
+                          gezogenen Lehren in meine zukünftigen Projekte
+                          übernommen.
+                        </div>
+                      }
+                    >
+                      <div>
+                        Because of this project I now value maintainability,
+                        readability and simplicity more than anything. I
+                        experienced the the long term consequences of my bad
+                        design decisions and took the lessons from them into my
+                        future projects.
+                      </div>
+                    </Show>
                     <div class=" w-full">
                       <ParallaxImage url="xympf.net.webp"></ParallaxImage>
                     </div>
@@ -473,7 +530,7 @@ export function Home(props: any) {
                   </summary>
                   <iframe
                     src="https://moonymax.github.io/Pong"
-                    class="min-h-screen w-full p-3"
+                    class="min-h-screen w-full pt-3 pb-3"
                   ></iframe>
                 </details>
               </More>
@@ -510,9 +567,31 @@ export function Home(props: any) {
                   <summary class="cursor-pointer rounded p-2 text-white bg-[#323b4c] w-fit">
                     More
                   </summary>
+                  <Show
+                    when={!german()}
+                    fallback={
+                      <div>
+                        Ich habe dieses Projekt ins Leben gerufen, weil das
+                        Schreiben von unzähligen Plugins für Spigot mit Java
+                        aufgrund der Java innewohnenden Menge an Boilerplate
+                        unerträglich wurde. Die Verwendung von Python zur
+                        Erstellung von Plugins ermöglicht eine schnelle
+                        Iteration und Lesbarkeit, was die Entwicklungserfahrung
+                        erheblich verbessert.
+                      </div>
+                    }
+                  >
+                    <div>
+                      I created this project because the writing of countless
+                      plugins for spigot using Java became unbearable due to
+                      Java's inherent volume of Boilerplate. Using Python to
+                      create plugins allows fast iteration and readability
+                      significantly improving the development experience.
+                    </div>
+                  </Show>
                   <iframe
                     src="https://moonymax.github.io/pyhook"
-                    class="min-h-screen w-full p-3"
+                    class="min-h-screen w-full pt-3 pb-3"
                   ></iframe>
                 </details>
               </More>
@@ -562,8 +641,24 @@ export function Home(props: any) {
                   <summary class="cursor-pointer rounded p-2 text-white bg-[#323b4c] w-fit">
                     More
                   </summary>
+                  <Show
+                    when={!german()}
+                    fallback={
+                      <div>
+                        Ich habe diese Library erstellt, weil ich eine größere
+                        Vielseitigkeit und Flexibilität im Vergleich zur
+                        tRPC-Websocket-Implementierung wollte.
+                      </div>
+                    }
+                  >
+                    <div>
+                      I created this Library because I wanted greater
+                      versatility and flexibility compared to tRPC's websocket
+                      based implementation.
+                    </div>
+                  </Show>
                   <iframe
-                    class="min-h-[50vh] w-full p-3"
+                    class="min-h-[50vh] w-full pt-3 pb-3"
                     src="https://moonymax.github.io/socketRPC"
                   ></iframe>
                 </details>
@@ -644,8 +739,25 @@ export function Home(props: any) {
                   <summary class="cursor-pointer rounded p-2 text-white bg-[#323b4c] w-fit">
                     More
                   </summary>
+                  <Show
+                    when={!german()}
+                    fallback={
+                      <div>
+                        Nachdem ich eine Reihe von Projekten mit verschiedenen
+                        Frameworks geschrieben habe, habe ich meine Erkenntnisse
+                        konsolidiert und diese Vorlage als Grundlage für meine
+                        zukünftigen Projekte/Anwendungen erstellt.
+                      </div>
+                    }
+                  >
+                    <div>
+                      After writing a number of projects using several
+                      frameworks I have consolidated my learnings to create this
+                      template as the basis for my future projects/applications.
+                    </div>
+                  </Show>
                   <iframe
-                    class="min-h-[60vh] w-full p-3"
+                    class="min-h-[60vh] w-full pt-3 pb-3"
                     src="https://moonymax.github.io/st3"
                   ></iframe>
                 </details>
@@ -704,7 +816,7 @@ export function Home(props: any) {
                     More
                   </summary>
                   <iframe
-                    class="min-h-screen w-full p-3"
+                    class="min-h-screen w-full pt-3 pb-3"
                     src="https://moonymax.github.io/resume"
                   ></iframe>
                 </details>
@@ -846,7 +958,7 @@ export function Home(props: any) {
                     More
                   </summary>
                   <iframe
-                    class="min-h-[60vh] w-full p-3"
+                    class="min-h-[60vh] w-full pt-3 pb-3"
                     src="https://moonymax.github.io/DataAnalysisNotebooks/"
                   ></iframe>
                 </details>
@@ -854,37 +966,6 @@ export function Home(props: any) {
             </div>
           </div>
         </div>
-        <Show
-          when={!german()}
-          fallback={
-            <h2 class="p-4 text-xl pt-6 font-semibold">{"Über Mich"}</h2>
-          }
-        >
-          <h2 class="p-4 text-xl pt-6 font-semibold">{"About Me"}</h2>
-        </Show>
-        <Show
-          when={!german()}
-          fallback={
-            <div>
-              Als Webenwickler schreibe ich Anwendungen in Python,
-              TypeScript/JavaScript und Frameworks wie Svelte, React,
-              SolidStart/SolidJS und Django. Dabei ist mir wichtig über die
-              neuesten Trends und Technologien in der Webentwicklung auf dem
-              Laufenden zu sein, um diese Technologien zeitnah und effizient
-              einzusetzen.
-            </div>
-          }
-        >
-          <div>
-            I am a Self-taught full-stack web developer. I have developed,
-            deployed and am independently managing infrastructure and
-            applications using Python, TypeScript/JavaScript, and frameworks
-            such as Svelte, React, SolidStart/SolidJS and Django. I stay
-            up-to-date with the latest web development trends and technologies
-            inorder to quickly adopt better tools and technologies as they
-            become available.
-          </div>
-        </Show>
         <div
           class="hover:bg-blue-500 w-full text-white p-2 rounded text-center m-3 cursor-pointer"
           onclick={() => setIsPDF((prev) => !prev)}
